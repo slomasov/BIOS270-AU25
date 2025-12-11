@@ -2,6 +2,7 @@
 
 > *"I’ll just run these steps manually this one time..." — last words before three weeks of debugging filenames.*
 
+- Modified and submitted coding files as specified in the md assignment
 
 Today, we’ll learn how to build and manage pipelines using **SLURM** and **Nextflow**
 
