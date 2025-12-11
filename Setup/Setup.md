@@ -184,6 +184,6 @@ done < data.txt
 ```
 
 Answer the following questions in your `write-up`:
-1. How many slurm job will be submitted?
-2. What is the purpose of the `if` statement?
-3. What is the expected output in each `*.out` file?
+1. How many slurm job will be submitted? - three jobs, one for each index 0-2
+2. What is the purpose of the `if` statement? - parallelizing the work between the jobs
+3. What is the expected output in each `*.out` file? - listing the input back per array index
