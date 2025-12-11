@@ -3,6 +3,8 @@
 ## Goals
 - Practice building Streamlit App with Streamlit and Plotly 
 - Learn how to deploy and share a Streamlit app using Streamlit Cloud.
+
+- Planning to count this as an extra HW(1/2); submitting just in case
   
 Resource: [streamlit](https://docs.streamlit.io/get-started/fundamentals/main-concepts)
 > Instruction: This HW is light enough to be run locally. Run on your laptop instead of Farmshare. Clone your repo to your laptop.
