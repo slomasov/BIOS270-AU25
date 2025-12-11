@@ -43,18 +43,18 @@ micromamba env export --from-history > bioinfo_example_latest.yaml
 
 The `--from-history` flag ensures that only explicitly installed packages are saved, keeping the environment file clean and minimal.
 
-Compare the new YAML file (`bioinfo_example_latest.yaml`) with the original one. What changes do you notice?
+Compare the new YAML file (`bioinfo_example_latest.yaml`) with the original one. What changes do you notice? - installed new packages
 
 Answer the following questions:
-- What micromamba command can you use to list all created environemnts?
-- What micromamba command can you use to list all packages installed in a specific environment?
-- What micromamba command can you use to remove a package?
-- What micromamba command can you use to install a package from a specific channel?
-- What micromamba command can you use to remove an environment?
+- What micromamba command can you use to list all created environemnts? - env list
+- What micromamba command can you use to list all packages installed in a specific environment? - list -n [name]
+- What micromamba command can you use to remove a package? remove -n [name] [package]
+- What micromamba command can you use to install a package from a specific channel? install -n [name] -c [channel] [package]
+- What micromamba command can you use to remove an environment? env remove -n [name]
 
 
 
-- What are all the `r-base` and `Bioconductor` packages that were installed in the `bioinfo_example` environment?
+- What are all the `r-base` and `Bioconductor` packages that were installed in the `bioinfo_example` environment? - r-base and r-base64enc
 *(Hint: You may want to use one of the commands from your answers to the above questions, and combine it with the `grep` command.)*
 
 >Remember to push the updated environment file and example outputs to your GitHub repository. Include your output plots and any observations in your write-up.
@@ -124,7 +124,7 @@ Create an example `python` file in your `$SCRATCH` that prints "Hello World!" an
 singularity run bioinfo_example_latest.sif python print_hello.py  
 ```
 
-Can you run it? Why do you think this is the case? *(Hint: -B flag)*
+Can you run it? Why do you think this is the case? *(Hint: -B flag)* - No: didn't mount the directory with -B
 
 4. Writing your own `Dockerfile`
 
