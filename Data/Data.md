@@ -85,8 +85,8 @@ sbatch create_bacteria_db.sh
 
 While the job is running, answer the following questions:
 
-- Examine `create_bacteria_db.sh`, how many tables will be created in the database?  
-- In the `insert_gff_table.py` script you submitted, explain the logic of using `try` and `except`. Why is this necessary?
+- Examine `create_bacteria_db.sh`, how many tables will be created in the database? - 3 tables  
+- In the `insert_gff_table.py` script you submitted, explain the logic of using `try` and `except`. Why is this necessary? - jobs are writing in parallel, so we need to make sure there are no race conditions
 
 ```python
 while try_num < max_retries:
@@ -119,7 +119,7 @@ python query_bacteria_db.py --database_path <path to the bacteria.db created in 
 Record the runtime. You may stop the session early if it takes too long and only record the runtime of the first few iterations.
 
 Then, uncomment `db.index_record_ids()` in `query_bacteria_db.py` and note how the runtime changes.  
-Why do you think this is the case?
+Why do you think this is the case? - takes minutes; after uncommenting, seconds - because there is no longer O(n) search over the database
 
 ---
 
@@ -128,7 +128,7 @@ Why do you think this is the case?
 The dataset you are handling is relatively small. However, for larger datasets or collaborative access, uploading to **Google BigQuery** is a practical approach.
 
 Examine the `upload_bigquery.py` script.  
-Explain the role of `CHUNK_SIZE` and why it is necessary:
+Explain the role of `CHUNK_SIZE` and why it is necessary: - we can't hold the whole database in memory, so we need to load it chunk-by-chunk
 
 ```python
 df = pd.read_sql_query(
@@ -152,7 +152,7 @@ Export the query results as a **CSV file** to **GCS**.
 Review the `create_protein_h5.sh` and `create_protein_h5.py` scripts.  
 Make sure you understand their functionality. You won't need to run these scripts as they take a few hours to complete.
 
-Explain why the following chunk configuration makes sense - what kind of data access pattern is expected, and why does this align with biological use cases?
+Explain why the following chunk configuration makes sense - what kind of data access pattern is expected, and why does this align with biological use cases? - expected 2d numpy data, probably good for batch loading for efficiency. Unsure about medical alignment - probably row-wise is good for memory efficiency
 
 ```python
 chunk_size = 1000
