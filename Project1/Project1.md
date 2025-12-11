@@ -4,6 +4,8 @@ In this project, you will build an end‑to‑end genomics pipeline to
 identify paralogous protein‑coding genes starting directly from raw
 Nanopore FASTQ files.
 
+- Planning to have this write-up as extra (5/6); submitting just in case
+
 > *Finally, we are here.*
 
 ------------------------------------------------------------------------
